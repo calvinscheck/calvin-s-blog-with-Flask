@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block title %} Homepage {% endblock %}
+
+{% block body %}
+   {{ super() }}
+<hr>
+
+<!-- Creating a first section of content  -->
+<div class="first-section">
+<div class="first-container">
+    <div class="first-container-heading"><h1>Calvin's Blog</h1></div>
+    <div class="first-container-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation
+        Ut enim ad minim veniam, quis nostrud Ut enim ad minim veniam, quis nostrud . </p> </div>
+</div>
+<div class="second-container">
+    <div>  <img class= my_image src="{{url_for('static', filename='calvin.jpeg')}}" /></div>
+</div>
+</div>
+<hr>
+
+<!-- Creating a third section of content -->
+<div class="third-section"> 
+    <div class="Article-1">Article 1</div>
+    <div class="Article-2">Article 2</div>
+    <div class="Article-3">Article 3</div> 
+    <div class="Article-4">Article 4</div>
+    <div class="Article-5">Article 5</div>
+    <div class="Article-6">Article 6</div>
+</div>
+
+<footer>
+
+</footer>
+{% endblock %}

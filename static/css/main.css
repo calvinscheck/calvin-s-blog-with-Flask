@@ -1,0 +1,11 @@
+/* Styling the header */
+.header {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+/* styling the line breaks */
+hr {
+    margin: 0;
+}

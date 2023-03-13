@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog Posts{% endblock %}
+
+{% block body %}
+
+{{ super() }}  
+
+<h1>Welcome to my blog posts</h1>
+
+  <ul>
+    {% for slug, posts in posts.items() %}
+      <li>
+        {{ posts }}
+      </li>
+    {% endfor %}
+  </ul>
+
+<p>I will continue posting more soon. Until then, feel free to send me some feedback in the contacts page.</p>
+{% endblock %}
