@@ -1,7 +1,6 @@
 from flask import Blueprint, render_template
 blueprint = Blueprint('posts', __name__)
 
-
 # Documenting all my articles
 blog_posts_dictionary = {
         'article1': 'The foundation of happiness',
