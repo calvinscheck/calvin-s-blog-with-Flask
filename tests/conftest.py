@@ -1,5 +1,5 @@
 import pytest
-from Blog import create_app
+from app.app import create_app
 from os import environ
 from flask_migrate import upgrade
 

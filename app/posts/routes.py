@@ -10,7 +10,7 @@ blog_posts_dictionary = {
     }
 
 # Routes related to blog posts
-@blueprint.route('/blog-posts')
+@blueprint.route('/blog')
 def blog_posts():
     return render_template('Blog/index.html', posts=blog_posts_dictionary)
 

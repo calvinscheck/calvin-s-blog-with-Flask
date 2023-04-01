@@ -14,7 +14,7 @@ def register_blueprints(app: Flask):
     app.register_blueprint(posts.routes.blueprint)
     app.register_blueprint(simple_pages.routes.blueprint)
 
-def register_extensions(app: Flask): 
+def register_extensions(app: Flask):
    db.init_app(app)
    migrate.init_app(app, db, compare_type=True)
 
