@@ -27,14 +27,18 @@
 <hr>
 
 <!-- Creating a third section of content -->
-<div class="third-section"> 
-    <div class="Article-1">Article 1</div>
-    <div class="Article-2">Article 2</div>
-    <div class="Article-3">Article 3</div> 
-    <div class="Article-4">Article 4</div>
-    <div class="Article-5">Article 5</div>
-    <div class="Article-6">Article 6</div>
+<div class="third-section">
+    {% for post in posts %}
+        <a href="{{ url_for('posts.blog_post', slug=post.slug) }}" class="post-link">
+            <div class="post-preview">
+                <h3 class="post-title">{{ post.name }}</h3>
+                <p class="post-slug">{{ post.slug }}</p>
+                <p class="post-date">{{ post.date.strftime('%Y-%m-%d') }}</p>
+            </div>
+        </a>
+    {% endfor %}
 </div>
+
 
 <footer>
 

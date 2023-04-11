@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ post.name }} {% endblock %}
+
+{% block body %}
+    {{ super() }}
+    <h1>{{ post.name }}</h1>
+    <p>Slug: {{ post.slug }}</p>
+    <p>Date: {{ post.date.strftime('%Y-%m-%d') }}</p>
+    <!-- Custom blog content I can add below here -->
+
+{% endblock %}

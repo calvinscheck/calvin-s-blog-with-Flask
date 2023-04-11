@@ -4,17 +4,17 @@
 
 {% block body %}
 
-{{ super() }}  
+{{ super() }}
 
 <h1>Welcome to my blog posts</h1>
 
-  <ul>
-    {% for slug, posts in posts.items() %}
-      <li>
-        {{ posts }}
-      </li>
-    {% endfor %}
-  </ul>
+<ul>
+  {% for post in posts %}
+    <li>
+      <h3>{{ post.name }} - <span>{{ post.date.strftime('%Y-%m-%d') }}</span></h3>
+    </li>
+  {% endfor %}
+</ul>
 
 <p>I will continue posting more soon. Until then, feel free to send me some feedback in the contacts page.</p>
 {% endblock %}

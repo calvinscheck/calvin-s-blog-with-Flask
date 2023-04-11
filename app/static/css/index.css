@@ -95,3 +95,43 @@ h1 {
         max-width: 350px;
     }
 }
+
+/* Stylising the post previews or Third section*/
+.third-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.post-preview {
+    width: 300px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.post-slug {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.post-date {
+    font-size: 0.9em;
+    color: #999;
+}
+
+.post-link {
+    text-decoration: none;
+    color: inherit;
+}
+

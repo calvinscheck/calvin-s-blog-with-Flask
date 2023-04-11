@@ -1,10 +1,12 @@
 from flask import Blueprint, render_template, redirect, url_for, send_file
 blueprint = Blueprint('simple_pages', __name__)
+from app.posts.models import Post
 
 # Defining which route should render what HTML file
 @blueprint.route('/')
 def index():
-    return render_template('simple_pages/index.html')
+    posts = Post.query.all()
+    return render_template('simple_pages/index.html', posts=posts)
 
 @blueprint.route('/contact')
 def contact():
