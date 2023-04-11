@@ -4,7 +4,30 @@
     justify-content: center;
     justify-content: space-around;
     list-style-type: none;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    font-size: 18px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
 }
+
+.header li {
+    display: inline;
+}
+
+.header a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+.header a:hover {
+    background-color: #e9ecef;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
 /* styling the line breaks */
 hr {
     margin: 0;

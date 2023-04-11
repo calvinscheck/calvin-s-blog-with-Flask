@@ -6,12 +6,10 @@ from app.posts.models import Post
 @blueprint.route('/')
 def index():
     posts = Post.query.all()
+    print("Index function called")  # Debug print
+    print(posts)  # Debug print
     return render_template('simple_pages/index.html', posts=posts)
 
 @blueprint.route('/contact')
 def contact():
     return render_template('simple_pages/contact.html')
-
-@blueprint.route('/my-account')
-def my_account():
-    return render_template('simple_pages/my-account.html')

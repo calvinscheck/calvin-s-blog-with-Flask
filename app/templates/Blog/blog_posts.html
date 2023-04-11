@@ -7,6 +7,6 @@
     <h1>{{ post.name }}</h1>
     <p>Slug: {{ post.slug }}</p>
     <p>Date: {{ post.date.strftime('%Y-%m-%d') }}</p>
-    <!-- Custom blog content I can add below here -->
-
+    <!-- Rendering the content of the post -->
+    <p> {{ post.content }} </p>
 {% endblock %}
