@@ -1,21 +1,26 @@
 {% extends 'base.html' %}
 
 {% block title %}Blog Posts{% endblock %}
-
+{% block head %} 
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+{% endblock %}
 {% block body %}
 
 {{ super() }}
 
 <h1>Welcome to my blog posts</h1>
 
+<div class="listed-posts-and-edit" >
 <ul>
   {% for post in posts %}
   <li>
-    <h3>{{ post.name }} - <span>{{ post.date.strftime('%Y-%m-%d') }}</span></h3>
-    <a href="{{ url_for('posts.edit_post', post_id=post.id) }}">Edit</a>
+    <div><h3>{{ post.name }} - <span>{{ post.date.strftime('%Y-%m-%d') }}</span></h3></div>
+    <div><a href="{{ url_for('posts.edit_post', post_id=post.id) }}">Edit</a></div>
   </li>
   {% endfor %}
 </ul>
+</div>
 
-<p>I will continue posting more soon. Until then, feel free to send me some feedback in the contacts page.</p>
+<p>You also have something interesting to contribute? Head over to the "Publish post" section and publish something yourself!</p>
 {% endblock %}

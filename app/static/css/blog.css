@@ -1,0 +1,21 @@
+/* Styling the list and button to make better use of space and have "edit" button on the same line */
+.listed-posts-and-edit ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .listed-posts-and-edit li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .listed-posts-and-edit h3 {
+    margin: 0;
+  }
+  
+  .listed-posts-and-edit span {
+    margin-left: 5px;
+  }
