@@ -1,0 +1,9 @@
+.listed-posts-and-edit {
+    min-height: 420px;
+}
+
+.listed-posts-and-edit li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+

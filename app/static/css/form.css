@@ -1,0 +1,32 @@
+/* Styling the form title */
+.page-title {
+    text-align: center;
+}
+/* Styles form container */
+form {
+    background-color: var(--background-color-2);
+    padding: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+}
+/* Styles the label elements */
+label {
+    display: block;
+    margin-top: 20px;
+}
+/* Styles the text input, date input, and textarea elements */
+input[type="text"], input[type="date"], textarea {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+/* Styles the submit button */
+input[type="submit"] {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: 10px 20px;
+    cursor: pointer;
+}

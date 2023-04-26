@@ -5,15 +5,6 @@ from app.extensions.database import db
 
 blueprint = Blueprint('posts', __name__)
 
-
-# Documenting all my articles
-#blog_posts_dictionary = {
- #       'article1': 'The foundation of happiness',
-  #      'article2': 'Life means balance',
-   #     'article3': 'The power of words',
-    #    'article4': 'Upcoming article',
-    #}
-
 # Routes related to blog posts
 @blueprint.route('/blog')
 def blog_posts():
@@ -53,7 +44,7 @@ def publish_post():
         db.session.commit()
 
         return redirect(url_for('simple_pages.index'))
-
+    
     return render_template('Blog/publish-posts.html')
 
 # Creating the route for making changes to posts in the database via the edit button on the Blog page
@@ -71,7 +62,6 @@ def edit_post(post_id):
         return redirect(url_for('simple_pages.index'))
 
     return render_template('Blog/edit_post.html', post=post)
-
 
 @blueprint.route('/delete-post/<int:post_id>', methods=['POST'])
 def delete_post(post_id):

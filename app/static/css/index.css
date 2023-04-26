@@ -5,12 +5,12 @@
 }
 h1 {
     font-size: 50px;
-    color: #344966;
+    color: var(--text-color);
 }
 .first-section {
     display: flex;
     justify-content: center;
-    background-color: #ECF0F1;
+    background-color: var(--background-color);
     height: 350px;
     min-height: 300px;
 }
@@ -28,7 +28,7 @@ h1 {
 
 .first-container-text {
     max-width: 400px;
-    color: #344966;
+    color: var(--text-color);
     font-size: 20px;
 }
 .second-container {
@@ -42,36 +42,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-.Article-1  {
-    display: flex;
-    border: 1px solid #344966;
-    padding: 100px;
-}
-.Article-2 {
-    display: flex;
-    border: 1px solid #344966;
-    padding: 100px;
-}
-.Article-3 {
-    display: flex;
-    border: 1px solid #344966;
-    padding: 100px;
-}
-.Article-4 {
-    display: flex;
-    border: 1px solid #344966;
-    padding: 100px;
-}
-.Article-5 {
-    display: flex;
-    border: 1px solid #344966;
-    padding: 100px;
-}
-.Article-6 {
-    display: flex;
-    border: 1px solid #344966;
-    padding: 100px;
 }
 
 /* ALL MEDIA QUERRIES FOR HOMEPAGE MAIN CONTENT */
@@ -108,7 +78,7 @@ h1 {
     width: 300px;
     margin-top: 30px;
     padding: 20px;
-    background-color: #f8f8f8;
+    background-color: var(--background-color-2);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     display: flex;
@@ -118,11 +88,13 @@ h1 {
 .post-title {
     font-size: 1.5em;
     margin-bottom: 10px;
+    color: var(--text-color);
 }
 
 .post-slug {
     font-size: 1.1em;
     margin-bottom: 5px;
+    color: var(--text-color);
 }
 
 .post-date {
@@ -134,4 +106,5 @@ h1 {
     text-decoration: none;
     color: inherit;
 }
+
 

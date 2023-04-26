@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 
 {% block title %}Publish Your Own post-link{% endblock %}
-
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+{% endblock %}
 {% block body %}
 {{ super() }}    
-<h1>Publish a Post</h1>
+<h1 class="page-title">Publish a Post</h1>
 
 <form action="{{ url_for('posts.publish_post') }}" method="post">
     <label for="name">Post Title:</label>

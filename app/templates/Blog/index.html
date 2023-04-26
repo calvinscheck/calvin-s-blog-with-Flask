@@ -4,6 +4,7 @@
 {% block head %} 
 {{ super() }}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/post-index.css') }}">
 {% endblock %}
 {% block body %}
 
@@ -15,10 +16,13 @@
 <ul>
   {% for post in posts %}
   <li>
-    <div><h3>{{ post.name }} - <span>{{ post.date.strftime('%Y-%m-%d') }}</span></h3></div>
+    <a href="{{ url_for('posts.blog_post', slug=post.slug) }}">
+      <h3>{{ post.name }} - <span>{{ post.date.strftime('%Y-%m-%d') }}</span></h3>
+    </a>
     <div><a href="{{ url_for('posts.edit_post', post_id=post.id) }}">Edit</a></div>
   </li>
-  {% endfor %}
+{% endfor %}
+
 </ul>
 </div>
 
