@@ -106,5 +106,9 @@ h1 {
     text-decoration: none;
     color: inherit;
 }
+/* Styling the line breaks */
+hr {
+    margin-top: 20px;
+}
 
 
